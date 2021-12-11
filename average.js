@@ -1,9 +1,11 @@
 
 function average(numbers) {
   
-  numbers=numbers.filter(x => !Number.isNaN(x))
+  //filtering NaN numbers with isNan function 
+ 
+  const Filternumbers=numbers.filter(function(num){const x =!Number.isNaN(num); return x;});
   
-  return numbers.reduce((p, c)=> p + c, 0) / numbers.length;
+  return Filternumbers.reduce((p, c)=> p + c, 0) / Filternumbers.length;
   
 }
 
